@@ -219,7 +219,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.maintainer.name=Prabhat774
+ro.maintainer.name= @mranonymz
 
 # Cpu
 PRODUCT_PROPERTY_OVERRIDES += \
