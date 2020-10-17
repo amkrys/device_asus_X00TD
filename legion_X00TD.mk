@@ -19,16 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Havoc stuff
-$(call inherit-product, vendor/legion/config/common_full_phone.mk)
-
 # Poduct spec
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Use Gapps
-WITH_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
 
 #OFFICIAL
 LEGION_BUILD_TYPE := OFFICIAL
