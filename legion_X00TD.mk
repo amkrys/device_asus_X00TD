@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Poduct spec
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Inherit some common Legion stuff
+$(call inherit-product, vendor/legion/config/common.mk)
+
 #OFFICIAL
 LEGION_BUILD_TYPE := OFFICIAL
 
