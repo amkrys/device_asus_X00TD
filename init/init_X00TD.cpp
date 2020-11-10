@@ -174,12 +174,12 @@ void vendor_check_variant()
     if (sys.totalram > 4096ull * 1024 * 1024) {
         // Russian model
         if (region == "RU") {
-            build_fingerprint = "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2005.082-20200506:user/release-keys";
+            build_fingerprint = "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys";
             product_device = "ASUS_X00T_9";
 
         // Global model
         } else {
-            build_fingerprint = "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2005.082-20200506:user/release-keys";
+            build_fingerprint = "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys";
             product_device = "ASUS_X00T_3";
         }
 
@@ -187,24 +187,23 @@ void vendor_check_variant()
     } else {
         // Russian model
         if (region == "RU") {
-            build_fingerprint = "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2005.082-20200506:user/release-keys";
+            build_fingerprint = "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys";
             product_device = "ASUS_X00T_6";
 
         // Global model
         } else {
-            build_fingerprint = "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2005.082-20200506:user/release-keys";
+            build_fingerprint = "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys";
             product_device = "ASUS_X00T_2";
         }
     }
 
     // Product model overrides
-    if (region == "RU" || region == "TW" ){
+    if (region == "RU" || region == "TW" ||
+        (region == "PH" && sys.totalram > 3072ull * 1024 * 1024))
         product_model = "ASUS_X00TDB";
-    }else if (region == "PH" && sys.totalram > 3072ull * 1024 * 1024){
-        product_model = "ASUS_X00TDB";
-    }else if (sys.totalram < 3072ull * 1024 * 1024){
+    else if (sys.totalram < 3072ull * 1024 * 1024)
         product_model = "ASUS_X00TDA";
-    }else
+    else
         product_model = "ASUS_X00TD";
 
     // Override props based on values set
