@@ -31,25 +31,24 @@ LEGION_BUILD_TYPE := OFFICIAL
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_BRAND := asus
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00TD
-PRODUCT_MANUFACTURER := asus
 PRODUCT_NAME := legion_X00TD
+PRODUCT_BRAND := asus
+PRODUCT_MANUFACTURER := asus
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 TARGET_VENDOR := asus
 TARGET_VENDOR_PRODUCT_NAME := X00TD
-
+    
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="ASUS_X00TD" \
     PRIVATE_BUILD_DESC="sdm660_64-user 9 PKQ1 8 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys"
+BUILD_FINGERPRINT := "Android/sdm660_64/sdm660_64:9/PKQ1/16.2017.2005.082-20200506:user/release-keys"
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
-    
-
-
 
