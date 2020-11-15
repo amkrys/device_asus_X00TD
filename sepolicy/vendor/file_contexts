@@ -24,6 +24,9 @@
 /dev/fpsdev0                                                            u:object_r:cdfinger_device:s0
 /data/system/cdfinger(/.*)?                                             u:object_r:cdfinger_data_file:s0
 
+# Persist
+/persist(/.*)?                                  u:object_r:mnt_vendor_file:s0
+
 # Lights HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.X00TD    u:object_r:hal_light_default_exec:s0
 
